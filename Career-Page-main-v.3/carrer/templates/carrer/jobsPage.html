@@ -14,7 +14,7 @@
 
     <!-- Favicon -->
     <link rel="icon" href="{% static '/images/carrer-fav-icon.png' %}" type="image/gif" sizes="16x16">
-    
+
     <link rel="stylesheet" href="{% static '/css/jobstyle2.css' %}">
 
     <!-- External CSS -->
@@ -42,7 +42,7 @@
 
     <!-- jQuery (ensure only one version is included) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+
     <!-- Additional Scripts (optional) -->
     <!--
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -58,7 +58,7 @@
                  padding-bottom: 15px;
                  position: relative;
                }
-      
+
                .nav-link:hover,
                .active {
                  border-bottom: 2px solid #fff;
@@ -66,20 +66,20 @@
                }
                .navbar-brand img{
                        margin-left: 30px;
-      
+
                      }
-      
+
                .navbar-brand p {
                  margin: 0;
                  font-size: 28px;
                  font-weight: bold;
                  color: white"
                }
-      
+
                .navbar-toggler-icon {
                  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
                }
-      
+
                @media (max-width: 990px) {
                  .navbar-collapse {
                    justify-content: flex-end;
@@ -87,11 +87,11 @@
                  .navbar-nav {
                    text-align: right;
                  }
-      
+
                  .nav-item {
                    margin: 0;
                  }
-      
+
                  .nav-link {
                    padding: 10px 0;
                    display: block;
@@ -122,7 +122,7 @@
                }
       </style>
 </head>
-      
+
 <body>
 
     {% if call == "yes" %}
@@ -130,24 +130,7 @@
         console.log("AGYE")
         window.alert("Application Submitted")</script>
     {% endif %}
-        <!-- <nav class="nav">
-            <div class="nav-logo">
-                <img src="{% static 'images/company_logo.png' %}" alt="logo" />
-                <p style="font-size: 28px; font-weight: bold;">Meta Scifor Technologies</p>
-            </div>
-            <div class="nav-menu" id="navMenu">
-                <ul>
-                    <li><a href="/" class="link" style="font-size: 20px; font-weight: bold;">Home</a></li>
-            <li><a href="/services"class="link" style="font-size: 20px; font-weight: bold;">Services</a></li>
-            <li><a href="/about-us" class="link" style="font-size: 20px; font-weight: bold;">About</a></li>
-            <li><a href="/case_study" class="link" style="font-size: 20px; font-weight: bold;">Case Studies</a></li>
-            <li><a href="/community" class="link" style="font-size: 20px; font-weight: bold;">Community</a></li>
-            <li><a href="#footer" class="link" style="font-size: 20px; font-weight: bold;">Contact</a></li>
-            <li><a href="#" class="link active" style="font-size: 20px; font-weight: bold;">Join Us</a></li>
-                </ul>
-            </div>
 
-        </nav> -->
         <nav
         class="navbar navbar-expand-lg navbar-dark fixed-top"
         style="background-color: #000"
@@ -183,9 +166,6 @@
             <li class="nav-item">
               <a class="nav-link" href="/case_study">Case Studies</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#footer">Contact</a>
-            </li> -->
             <li class="nav-item">
               <a class="nav-link" href="/community">Community</a>
             </li>
@@ -196,9 +176,9 @@
         </div>
         </nav>
 
-        
 
-   <div class="all-jobs-heading"><b>Current</b> Openings</div> 
+
+   <div class="all-jobs-heading"><b>Current</b> Openings</div>
 
      <br />
     <div class="outer-jobs ">
@@ -209,9 +189,6 @@
             <img src="{% static 'images/hiring.svg' %}" alt="image"  />
         </div>
     </div>
-
-    <!-- already commented -->
-    <!-- <script src={% static 'js/fetchJobs.js' %}></script> -->
 
 
    <script>
@@ -228,7 +205,7 @@
                         $("#allJobs").append(
                             `<div class="jobs-card jobs-card-big">
                                 <div class="job-card-content">
-                                    
+
                                         <div class="job-intro">
                                             <span><h3>` +
                             response[i].position +
@@ -255,7 +232,7 @@
                             response[i].description +
                             `
                                         </span>
-                                    
+
                                 </div>
                             </div>`
                         );
@@ -264,7 +241,7 @@
             });
         });
     </script>
-    
+
     <script>
         function sleep(ms) {
             return new Promise((resolve) => setTimeout(resolve, ms));
@@ -300,7 +277,7 @@
                         $("#description").empty();
                         $("#description").append(
                             `<div class="jobs-card jobs-card-big job-desc" style="height:80vh; width:100%;">
-                            
+
                             <div class='hover'>
                                 <button class="back-button-form" onclick=closeForm()>
                                     Back
@@ -312,7 +289,7 @@
                                         <h1 class="form_title">Upload Your Resume</h1>
 
                                         <input type="text" class="JobID" name="id" value="`+ response.id +`"></input>
-                                        
+
                                         <div class="form_div">
                                             <input type="text" class="form_input" name="name" placeholder=" " required>
                                         <label for="" class="form_label">Name</label>
@@ -345,7 +322,7 @@
 
 
                 <div class="job-card-content">
-                    
+
                         <div class="job-intro">
                             <span>
                                 <h3>` +
@@ -381,9 +358,9 @@
                         <div>
                             ` +
                             response.requirements +
-                            `    
+                            `
                         </div>
-                    
+
                 </div>
             </div>`
                         );
@@ -406,7 +383,7 @@
                 right: "-100%",
             });
         }
-    </script> 
+    </script>
 
 
 
@@ -419,7 +396,7 @@
         // _data["csrfmiddlewaretoken"] = $('input[name=csrfmiddlewaretoken]').val();
         console.log(_data1);
         console.log("AGEY");
-        
+
         $.ajax({
             url: "/application/",
             type: "post",
@@ -439,7 +416,7 @@
     <hr class="line">
 
 
-    <hr class="line"> 
+    <hr class="line">
 
     {% include 'carrer/footer.html' %}
 
@@ -447,7 +424,7 @@
     <!-- <script>
         AOS.init({
         //   offset: "200",
-        //   delay: "100", 
+        //   delay: "100",
         //   duration: "1000",
         });
       </script> -->

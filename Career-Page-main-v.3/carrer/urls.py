@@ -34,4 +34,5 @@ urlpatterns = [
     path('game-development/', views.game_development, name='game_development'),
     path('ui-ux-design/', views.ui_ux_design, name='ui_ux_design'),
 
+
 ]

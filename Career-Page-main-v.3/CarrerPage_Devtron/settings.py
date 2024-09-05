@@ -137,11 +137,9 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'justfun1394@gmail.com'
-EMAIL_HOST_PASSWORD = 'swyj ufis nzmq lzpv'
+EMAIL_HOST_USER = 'info@scifortechnologies.com'
+EMAIL_HOST_PASSWORD = 'lzyh pzje emug wsfz'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
-DEFAULT_FROM_EMAIL = 'justfun1394@gmail.com'
+DEFAULT_FROM_EMAIL = 'info@scifortechnologies.com'
 
-
-# django_heroku.settings(locals())

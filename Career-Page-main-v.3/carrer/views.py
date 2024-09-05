@@ -275,3 +275,5 @@ def game_development(request):
 
 def ui_ux_design(request):
     return render(request, 'carrer/ui_ux_design.html')
+
+

@@ -1033,26 +1033,21 @@
        
       </section>
 
-      <!-- get in touch section -->
-
-      <!-- <section class="container background-image d-flex justify-content-end align-items-center">
-        <div class="form-container me-5 ">
-            <h2 class="form-title text-center mb-3">Connect with Us!</h2>
-            <form>
+<section class="container background-image d-flex justify-content-end align-items-center">
+    <div class="text-center me-5">
+        <h2 class="form-title mb-3">Connect with Us!</h2>
+        <div class="form-container">
+            <form id="contactForm">
                 <div class="mb-3">
-                  
                     <input type="text" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="mb-3">
-                    
                     <input type="email" class="form-control" id="email" placeholder="Company Email" required>
                 </div>
                 <div class="mb-3">
-                    
                     <input type="text" class="form-control" id="phone" placeholder="Mobile Number" required>
                 </div>
                 <div class="mb-3">
-                   
                     <textarea class="form-control" id="inquiry" rows="3" placeholder="Inquiry" required></textarea>
                 </div>
                 <div class="d-grid">
@@ -1060,32 +1055,33 @@
                 </div>
             </form>
         </div>
-    </section> -->
+    </div>
+</section>
 
-    <section class="container background-image d-flex justify-content-end align-items-center">
-      <div class="text-center me-5">
-          <h2 class="form-title mb-3">Connect with Us!</h2>
-          <div class="form-container">
-              <form>
-                  <div class="mb-3">
-                      <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                  </div>
-                  <div class="mb-3">
-                      <input type="email" class="form-control" id="email" placeholder="Company Email" required>
-                  </div>
-                  <div class="mb-3">
-                      <input type="text" class="form-control" id="phone" placeholder="Mobile Number" required>
-                  </div>
-                  <div class="mb-3">
-                      <textarea class="form-control" id="inquiry" rows="3" placeholder="Inquiry" required></textarea>
-                  </div>
-                  <div class="d-grid">
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                  </div>
-              </form>
-          </div>
-      </div>
-  </section>
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event){
+        event.preventDefault(); // Prevent form submission
+
+        // Get form data
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var inquiry = document.getElementById("inquiry").value;
+
+        // Create mailto link
+        var mailtoLink = "mailto:info@scifortechnologies.com"
+                        + "?subject=Inquiry from " + encodeURIComponent(name)
+                        + "&body=" + encodeURIComponent("Name: " + name + "\n")
+                        + encodeURIComponent("Email: " + email + "\n")
+                        + encodeURIComponent("Phone: " + phone + "\n")
+                        + encodeURIComponent("Inquiry: " + inquiry);
+
+        // Open mailto link
+        window.location.href = mailtoLink;
+    });
+</script>
+
+
    
     </main>
 
@@ -1115,84 +1111,58 @@
           <div class="social-icons mt-4 ms-4">
             <a
               href="https://www.facebook.com/share/togajFtqxTBofCCP/?mibextid=qi2Omg"
-              target="_blank"
-            >
+              target="_blank">
               <img src="{% static 'fb.png' %}" alt="Facebook" />
             </a>
-            <a href="#">
+            <a href="https://twitter.com/scifortechn?t=z4KKnjQzEWpobUxp1gmNiw&s=03">
               <img src="{% static 'twitter.png' %}" alt="Twitter" />
             </a>
             <a
               href="https://www.linkedin.com/company/scifortechnologies/"
-              target="_blank"
-            >
+              target="_blank">
               <img src="{% static 'linkedin.png' %}" alt="LinkedIn" />
             </a>
-            <a href="#">
+            <a href="https://wa.me/+916235187933">
               <img src="{% static 'wp.png' %}" alt="Whatsapp" />
             </a>
-            <a href="#">
+            <a href="https://www.youtube.com/@SciforTechnologies">
               <img src="{% static 'youtube.png' %}" alt="Youtube" />
             </a>
             <a
               href="https://www.instagram.com/metascifortechnologies?igsh=MXVwbXdodm5pYWFqNA=="
-              target="_blank"
-            >
+              target="_blank">
               <img src="{% static 'instagram.png' %}" alt="Instagram" />
             </a>
           </div>
+
         </div>
         <div class="col-md-3 mb-3">
           <h3 class="footer-title fw-bold mb-3">Links</h3>
           <ul class="list-unstyled">
+                          <li class="mb-2">
+            <a href="#" class="text-white" style="text-decoration: none">HOME</a
+            >
+          </li>
+          <li class="mb-2">
+            <a href="/services" class="text-white" style="text-decoration: none">SERVICES</a
+            >
+          </li>
             <li class="mb-2">
-              <a href="#" class="text-white" style="text-decoration: none"
-                >HOME</a
-              >
-            </li>
+            <a href="/about-us" class="text-white" style="text-decoration: none">ABOUT US</a
+            >
+          </li>
             <li class="mb-2">
-              <a
-                href="/services"
-                class="text-white"
-                style="text-decoration: none"
-                target="_blank"
-                >SERVICES</a
-              >
-            </li>
+            <a href="/case_study" class="text-white" style="text-decoration: none">CASE STUDIES</a
+            >
+          </li>
             <li class="mb-2">
-              <a
-                href="/about-us"
-                class="text-white"
-                style="text-decoration: none"
-                target="_blank"
-                >ABOUT</a
-              >
-            </li>
+            <a href="/community" class="text-white" style="text-decoration: none">COMMUNITY</a
+            >
+          </li>
             <li class="mb-2">
-              <a
-                href="/case_study"
-                class="text-white"
-                style="text-decoration: none"
-                target="_blank"
-                >CASE STUDIES</a
-              >
-            </li>
-            <li class="mb-2">
-              <a
-                href="#footer"
-                class="text-white"
-                style="text-decoration: none"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a
-                onclick="window.location.href='/carrer'"
-                class="link"
-                style="font-size: 20px; font-weight: bold"
-                >Join Us</a
-              >
-            </li>
+            <a href="/career" class="text-white" style="text-decoration: none">JOIN US</a
+            >
+          </li>
           </ul>
         </div>
         <div class="col-md-3 mb-3">
