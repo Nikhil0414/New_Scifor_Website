@@ -12,7 +12,7 @@ from .forms import JobForm, ApplicationForm
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from .models import Testimonial, CaseStudy, Article
-from .models import TeamMember
+from .models import TeamMember, EmployeeReview, Client
 
 import csv
 
@@ -20,7 +20,11 @@ import csv
 # Existing views
 
 def carrer(request):
-    return render(request, 'carrer/carrer.html')
+    employee_reviews = EmployeeReview.objects.all()
+    context = {
+        'employee_reviews': employee_reviews
+    }
+    return render(request, 'carrer/carrer.html', context)
 
 
 def main(request):
@@ -175,8 +179,12 @@ def send_acknowledgment_email(name, email):
 def home(request):
     testimonials = Testimonial.objects.all()
     case_studies = CaseStudy.objects.all()
-    return render(request, 'carrer/page.html', {'testimonials': testimonials, 'case_studies': case_studies})
-
+    clients = Client.objects.all()
+    return render(request, 'carrer/page.html', {
+        'testimonials': testimonials,
+        'case_studies': case_studies,
+        'clients': clients
+    })
 
 def submit_form(request):
     if request.method == 'POST':

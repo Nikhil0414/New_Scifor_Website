@@ -87,3 +87,21 @@ class TeamMember(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class EmployeeReview(models.Model):
+    name = models.CharField(max_length=100)
+    role = models.CharField(max_length=100)  # Role as a text field
+    quote = models.TextField()
+    image = models.ImageField(upload_to='employee_images/')  # Ensure you have MEDIA settings configured
+
+    def __str__(self):
+        return f"{self.name} - {self.role}"
+
+
+class Client(models.Model):
+    name = models.CharField(max_length=100, blank=True, null=True)
+    logo = models.ImageField(upload_to='client_logos/')  # Ensure you have MEDIA settings configured
+
+    def __str__(self):
+        return self.name

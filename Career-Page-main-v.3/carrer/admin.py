@@ -11,6 +11,11 @@ admin.site.register(models.CaseStudy)
 
 admin.site.register(models.Article)
 admin.site.register(models.TeamMember)
+admin.site.register(models.EmployeeReview)
+
+admin.site.register(models.Client)
+
+
 
 
 
